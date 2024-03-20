@@ -17,28 +17,28 @@ const FolderSettings = ({ id, folderName, folderUrl, createdAt, setToggle }) => 
 
     const [settings, setSettings] = useState(false);
     const [detailPopup, setDetailPopup] = useState(false);
-    const [colorsPopup, setColorsPopup] = useState(false);
+    // const [colorsPopup, setColorsPopup] = useState(false);
 
-    const colors = useMemo(() => [
-        "#FFACAC", "#FFBFA9", "#FFEBB4", "#3A98B9", "#F7C8E0", "#B9F3E4", "#E3DFFD", "#B9F3FC",
-        "#FFCEFE", "#E3ACF9", "#D7E9B9", "#9EA1D4", "#CEEDC7", "#ADA2FF", "#F8F988", "#DEBACE"
-    ], []);
+    // const colors = useMemo(() => [
+    //     "#FFACAC", "#FFBFA9", "#FFEBB4", "#3A98B9", "#F7C8E0", "#B9F3E4", "#E3DFFD", "#B9F3FC",
+    //     "#FFCEFE", "#E3ACF9", "#D7E9B9", "#9EA1D4", "#CEEDC7", "#ADA2FF", "#F8F988", "#DEBACE"
+    // ], []);
 
-    const colorsList = useMemo(() =>
-        colors.map((color, index) => (
-            <Button
-                key={index}
-                className="w-6 h-6 md:h-10 md:w-10 rounded-full border border-slate-700"
-                style={{ backgroundColor: color }}
-                onClick={(e) => {
-                    updateFolderColor(e, updateId, color, setFolders);
-                    setOverlay(false);
-                    setColorsPopup(false);
-                }}
-            ></Button>
-        )),
-        [colors]
-    );
+    // const colorsList = useMemo(() =>
+    //     colors.map((color, index) => (
+    //         <Button
+    //             key={index}
+    //             className="w-6 h-6 md:h-10 md:w-10 rounded-full border border-slate-700"
+    //             style={{ backgroundColor: color }}
+    //             onClick={(e) => {
+    //                 updateFolderColor(e, updateId, color, setFolders);
+    //                 setOverlay(false);
+    //                 setColorsPopup(false);
+    //             }}
+    //         ></Button>
+    //     )),
+    //     [colors]
+    // );
 
     const handleToggleSettings = () => {
         setSettings(!settings);
@@ -56,11 +56,11 @@ const FolderSettings = ({ id, folderName, folderUrl, createdAt, setToggle }) => 
         setOverlay(true);
     };
 
-    const handleColorsClick = () => {
-        getId(id, setUpdateId, folderName, setFolder);
-        setColorsPopup(true);
-        setOverlay(true);
-    };
+    // const handleColorsClick = () => {
+    //     getId(id, setUpdateId, folderName, setFolder);
+    //     setColorsPopup(true);
+    //     setOverlay(true);
+    // };
 
     const handleEmptyFolderClick = () => {
         deleteFolderImages(folderUrl, images);
@@ -92,9 +92,9 @@ const FolderSettings = ({ id, folderName, folderUrl, createdAt, setToggle }) => 
                     <Button className='text-sm flex gap-2 items-center' onClick={handleDetailsClick}>
                         <FcViewDetails /> Details
                     </Button>
-                    <Button className='text-sm flex gap-2 items-center' onClick={handleColorsClick}>
+                    {/* <Button className='text-sm flex gap-2 items-center' onClick={handleColorsClick}>
                         <VscSymbolColor /> Color
-                    </Button>
+                    </Button> */}
                     <Button className='text-sm flex gap-2 items-center' onClick={handleEmptyFolderClick}>
                         <FcEmptyTrash /> Empty Folder
                     </Button>
@@ -104,7 +104,7 @@ const FolderSettings = ({ id, folderName, folderUrl, createdAt, setToggle }) => 
                 </div>
             </div>
 
-            {/* COLOR PALETTE */}
+            {/* COLOR PALETTE
             <div className={`${colorsPopup ? "" : "hidden"} w-72 md:w-96 fixed absolute-center z-106 mt-2 bg-white p-5 rounded-lg`}>
                 <div className="flex flex-wrap gap-3">
                     {colorsList}
@@ -115,7 +115,7 @@ const FolderSettings = ({ id, folderName, folderUrl, createdAt, setToggle }) => 
                 }}>
                     <RxCross1 size="16px" color='crimson' />
                 </Button>
-            </div>
+            </div> */}
 
             <Details
                 details={[

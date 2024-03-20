@@ -29,7 +29,7 @@ function Home() {
               <p className="text-gray-100 text-base md:text-lg">Save your important images and pdf files here with us and we will take care of it for you. You can access your files anytime, anywhere.</p>
             </div>
             <div className="flex items-center space-x-3">
-              <Link href="folders/navigation" className='btn--green-glow'>Gallary</Link>
+              <Link href="folders/navigation" className='btn--green-glow'>Gallery</Link>
             </div>
           </div>
           <div className="flex items-center justify-center lg:w-1/2">

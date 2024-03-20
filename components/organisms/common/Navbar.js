@@ -30,9 +30,8 @@ function Navbar({ tokenId }) {
             <nav className={styles.nav}>
               <>
                 <Link href="/home" className='btn--green-glow' onClick={isOpen}>Home</Link>
-                <Link href="/folders/navigation" className='btn--green-glow' onClick={isOpen}>Gallary</Link>
-                <Link href="/feedback" className='btn--green-glow' onClick={isOpen}>Feedback</Link>
-                <Link href="/contacts" className='btn--green-glow' onClick={isOpen}>Contacts</Link>
+                <Link href="/folders/navigation" className='btn--green-glow' onClick={isOpen}>Gallery</Link>
+                
                 <button className="btn--dark"
                   onClick={() => logout(router, setTokenId)}>Logout</button>
               </>
