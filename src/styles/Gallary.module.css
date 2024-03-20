@@ -1,0 +1,31 @@
+@tailwind components;
+
+@layer components {
+
+    /* FULLSCREEN */
+    .full_screen {
+        @apply fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 overflow-scroll w-fit h-fit md:h-2/3;
+    }
+    
+    .overlay {
+        @apply bg-black/30 fixed top-0 bottom-0 right-0 left-0 z-105;
+    }
+
+    .foldersNav {
+        @apply h-screen overflow-auto py-4 px-6 rounded-tr-xl;
+    }
+
+    .foldersList {
+        @apply flex flex-wrap gap-4;
+    }
+
+    .folderLink {
+        @apply px-4 py-3 rounded-md text-xl;
+    }
+
+
+    .foldersList > * {
+        @apply max-w-180 min-w-180;
+    }
+
+}

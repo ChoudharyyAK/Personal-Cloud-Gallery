@@ -1,0 +1,25 @@
+@tailwind components;
+
+@layer components {
+
+    .navbar {
+        @apply flex flex-col bg-black text-white py-5 px-8 lg:h-full lg:z-99 lg:justify-between lg:flex-row lg:items-center lg:gap-8;
+    }
+
+    .navbar a {
+        @apply text-white;
+    }
+
+    .nav {
+        @apply flex items-center flex-col gap-10 mt-20 lg:gap-4 lg:mt-0 lg:flex-row;
+    }
+
+    .logo {
+        @apply w-12 h-10 md:h-12;
+    }
+
+    .buttonRed {
+        @apply bg-light-red text-white py-1 px-4 border-none rounded-xl;
+    }
+
+}
