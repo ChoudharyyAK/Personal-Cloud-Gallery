@@ -57,9 +57,11 @@ function App({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-      <footer>
-        <Footer />
-      </footer>
+      {tokenId && (
+        <footer>
+          <Footer />
+        </footer>
+      )}
     </AppContext.Provider>
   )
 }

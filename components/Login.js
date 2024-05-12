@@ -30,7 +30,7 @@ function Login({ router }) {
             <div className='card'>
                 <div className='card-content'>
                     <H1 className='mt-5 text-2xl md:text-6xl text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-white'>WELCOME TO W-DRIVE</H1>
-                    <Para className='mt-10 text-lg text-center md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-white'>Your Personal Cloud Gallary</Para>
+                    <Para className='mt-10 text-lg text-center md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-white'>Your Personal Cloud Gallery</Para>
                     <Para className='mt-4 text-lg md:text-2xl text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-white'>Just say login or click the button below</Para>
                 </div>
             </div>

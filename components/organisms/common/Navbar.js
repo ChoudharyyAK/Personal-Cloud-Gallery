@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import Image from "next/image"
 import { useRouter } from 'next/router'
 import styles from '@/styles/Navbar.module.css'
@@ -18,10 +18,18 @@ function Navbar({ tokenId }) {
   //router
   const router = useRouter()
   const { setTokenId } = useContext(AppContext)
+
+  useEffect(() => {
+    let token = sessionStorage.getItem("Token")
+    setTokenId(token)
+    if (!token) {
+        router.push("/")
+    }
+}, [])
   return (
     <>
       {
-        tokenId ?
+        tokenId &&
           <div className={ `${open ? "h-screen z-105" : "h-18 overflow-hidden"} ${styles.navbar}`} >
             <div className='flex justify-between items-center w-full'>
               <Image src={Logo} className={`${styles.logo} rounded-full`} alt="logo" />
@@ -32,12 +40,12 @@ function Navbar({ tokenId }) {
                 <Link href="/home" className='btn--green-glow' onClick={isOpen}>Home</Link>
                 <Link href="/folders/navigation" className='btn--green-glow' onClick={isOpen}>Gallery</Link>
                 
+                <Link href="/contacts" className='btn--green-glow' onClick={isOpen}>Contacts</Link>
                 <button className="btn--dark"
                   onClick={() => logout(router, setTokenId)}>Logout</button>
               </>
             </nav>
-          </div >
-          : ""
+          </div>
       }
     </>
   )

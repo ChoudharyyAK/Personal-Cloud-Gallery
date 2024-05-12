@@ -100,6 +100,7 @@ function GallaryCard({ id, folderUrl, imageUrl, imageName, createdAt, size, cont
                     </div>
                 </Worker>
             )}
+            <p className="mt-4 mb-2 text-sm bg-white text-slate-900 p-2 overflow-hidden text-center rounded-lg">{imageName.substring(0, imageName.lastIndexOf('.')).slice(0,20)}...</p>
 
             <div className={`${fullScreen ? "hidden" : "flex justify-between px-4 mt-3"}`}>
                 <Button className="p-1 rounded-full border-2 border-red-400" onClick={handleDeleteImage}>
